@@ -1,5 +1,13 @@
 import date from "./date";
 module.export = {
+  isAlphabets: (value) => {
+    let pattern = /[A-Za-z]$/;
+    return pattern.test(value);
+  },
+  isAlphaNumeric: (value) => {
+    let pattern = /[A-Za-z0-9 ]$/;
+    return pattern.test(value);
+  },
   capitalize: (value) => {
     let wordArray = value.split(" ");
     let words = [];
