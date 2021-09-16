@@ -64,7 +64,7 @@ export default {
     } else if (typeof value === "object") {
       return Object.keys(value).length > 0;
     } else {
-      return value === null || value.trim() === "";
+      return value !== null || value.trim() !== "";
     }
   },
   isNumber(value) {
