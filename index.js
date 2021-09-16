@@ -1,11 +1,11 @@
 import date from "./date";
 module.export = {
   isAlphabets: (value) => {
-    let pattern = /[A-Za-z]$/;
+    let pattern = /[A-Za-z]*$/;
     return pattern.test(value);
   },
   isAlphaNumeric: (value) => {
-    let pattern = /[A-Za-z0-9 ]$/;
+    let pattern = /[A-Za-z0-9\s]*$/;
     return pattern.test(value);
   },
   capitalize: (value) => {
@@ -29,7 +29,7 @@ module.export = {
 
   isDateTime: (value) => {
     let pattern = /^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}$/;
-    return value.match(pattern);
+    return value.test(pattern);
   },
 
   isValidDate: (first, op, second) => {
@@ -45,9 +45,16 @@ module.export = {
       return date1st.getTime() >= date2nd.getTime();
     }
   },
-  convert: (culture, timeZone) => {
-    var aestTime = new Date().toLocaleString(culture, { timeZone: timeZone });
-    return new Date(aestTime);
+  convert: (value, timeZone) => {
+    var dateString = new Date(value).toLocaleString("en-US", {
+      timeZone: timeZone,
+    });
+
+    var target = new Date(dateString);
+    var timeOffsetInMS = target.getTimezoneOffset() * 60000;
+    target.setTime(target.getTime() - timeOffsetInMS);
+   
+    return target;
   },
   isUndefined: (value) => {
     return value === undefined;
