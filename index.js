@@ -1,4 +1,4 @@
-module.export = {
+export default {
   isAlphabets: (value) => {
     let pattern = /[A-Za-z]*$/;
     return pattern.test(value);
