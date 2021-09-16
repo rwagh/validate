@@ -60,11 +60,11 @@ export default {
   },
   isNullOrEmpty: (value) => {
     if (Array.isArray(value)) {
-      return value.length > 0;
+      return value.length <= 0;
     } else if (typeof value === "object") {
-      return Object.keys(value).length > 0;
+      return Object.keys(value).length <= 0;
     } else {
-      return value !== null || value.trim() !== "";
+      return value === null || value.trim() === "";
     }
   },
   isNumber(value) {
