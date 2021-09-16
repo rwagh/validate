@@ -1,4 +1,4 @@
-module.export = {
+const validate = {
   isAlphabets: (value) => {
     let pattern = /[A-Za-z]*$/;
     return pattern.test(value);
@@ -52,7 +52,7 @@ module.export = {
     var target = new Date(dateString);
     var timeOffsetInMS = target.getTimezoneOffset() * 60000;
     target.setTime(target.getTime() - timeOffsetInMS);
-   
+
     return target;
   },
   isUndefined: (value) => {
@@ -93,3 +93,5 @@ module.export = {
     return pattern.test(value);
   },
 };
+
+module.export = validate;
