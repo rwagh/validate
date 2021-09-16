@@ -1,5 +1,5 @@
 {
-  "name": "validate",
+  "name": "@waghravi/validate",
   "version": "1.0.0",
   "description": "Validations",
   "main": "index.js",
@@ -10,11 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/rwagh/validate.git"
   },
-  "author": {
-    "name": "Ravindra Wagh",
-    "email": "ravindra.wagh@live.in",
-    "phone": "+91 99043 77726"
-  },
+  "author": "Ravindra Wagh <ravindra.wagh@live.in>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rwagh/validate/issues"
