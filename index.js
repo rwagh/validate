@@ -93,5 +93,4 @@ const validate = {
     return pattern.test(value);
   },
 };
-
-module.export = validate;
+module.exports = validate;
