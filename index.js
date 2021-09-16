@@ -1,4 +1,3 @@
-import date from "./date";
 module.export = {
   isAlphabets: (value) => {
     let pattern = /[A-Za-z]*$/;
