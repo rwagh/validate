@@ -1,0 +1,23 @@
+{
+  "name": "validate",
+  "version": "1.0.0",
+  "description": "Validations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwagh/validate.git"
+  },
+  "author": {
+    "name": "Ravindra Wagh",
+    "email": "ravindra.wagh@live.in",
+    "phone": "+91 99043 77726"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwagh/validate/issues"
+  },
+  "homepage": "https://github.com/rwagh/validate#readme"
+}
