@@ -1,6 +1,6 @@
 const validate = {
   isAlphabets: (value) => {
-    let pattern = /[A-Za-z]*$/;
+    let pattern = /^[a-zA-Z]+$/;
     return pattern.test(value);
   },
   isAlphaNumeric: (value) => {
