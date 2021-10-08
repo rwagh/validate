@@ -1,6 +1,6 @@
 {
   "name": "@waghravi/validate",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Validations",
   "main": "index.js",
   "scripts": {
