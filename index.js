@@ -4,7 +4,7 @@ const validate = {
     return pattern.test(value);
   },
   isAlphaNumeric: (value) => {
-    let pattern = /[A-Za-z0-9\s]*$/;
+    let pattern = /^[a-zA-Z0-9]+$/i;
     return pattern.test(value);
   },
   capitalize: (value) => {
