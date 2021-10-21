@@ -76,7 +76,8 @@ const validate = {
     return regex.test(string) ? true : false;
   },
   isPhone: (value) => {
-    let pattern = /^[+]?\d+$/;
+    //let pattern = /^[+]?\d+$/;
+    let pattern = /^\d+$/;
     return pattern.test(value);
   },
   isEmail: (email) => {
