@@ -1,4 +1,4 @@
-const validate = {
+export default {
   isAlphabets: (value) => {
     let pattern = /^[a-zA-Z]+$/;
     return pattern.test(value);
@@ -94,4 +94,3 @@ const validate = {
     return pattern.test(value);
   },
 };
-module.exports = validate;
