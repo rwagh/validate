@@ -4,17 +4,8 @@ export default {
     return pattern.test(value);
   },
   isAlphaNumeric: (value) => {
-    let pattern = /^[a-zA-Z0-9]+$/i;
+    let pattern = /^[-_ a-zA-Z0-9]+$/;
     return pattern.test(value);
-  },
-  capitalize: (value) => {
-    let wordArray = value.split(" ");
-    let words = [];
-    wordArray.forEach((word) => {
-      const lower = word.toLowerCase();
-      words.push(word.charAt(0).toUpperCase() + lower.slice(1));
-    });
-    return words.join(" ");
   },
   isDate: (value) => {
     let pattern = /^\d{4}-\d{2}-\d{2}$/;
@@ -44,24 +35,13 @@ export default {
       return date1st.getTime() >= date2nd.getTime();
     }
   },
-  convert: (value, timeZone) => {
-    var dateString = new Date(value).toLocaleString("en-US", {
-      timeZone: timeZone,
-    });
-
-    var target = new Date(dateString);
-    var timeOffsetInMS = target.getTimezoneOffset() * 60000;
-    target.setTime(target.getTime() - timeOffsetInMS);
-
-    return target;
-  },
   isUndefined: (value) => {
     return value === undefined;
   },
   isNullOrEmpty: (value) => {
     if (Array.isArray(value)) {
       return value.length <= 0;
-    } else if (typeof value === "object") {
+    } else if (typeof value === "object" && value !== null) {
       return Object.keys(value).length <= 0;
     } else {
       return value === null || value.trim() === "";
