@@ -1,6 +1,6 @@
 export default {
   isAlphabets: (value) => {
-    let pattern = /^[a-zA-Z]+$/;
+    let pattern = /^[ a-zA-Z]+$/;
     return pattern.test(value);
   },
   isAlphaNumeric: (value) => {
